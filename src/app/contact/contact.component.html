@@ -1,0 +1,7 @@
+<input #newText
+       (keyup.enter)="onClickMe(newText.value)"
+       (blur)="onClickMe(newText.value); newText.value='' ">
+<button (click)="onClickMe(newText.value)">Add</button>
+<ul>
+    <li *ngFor="let contact in contacts">{{contact}}</li>
+</ul>
